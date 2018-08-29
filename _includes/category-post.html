@@ -1,0 +1,36 @@
+<article class="entry-item large-post mb-50">
+
+    <div class="entry-img">
+        {% if post.hero_image %}
+        <a href="{{ post.url }}"><img src="{{ post.hero_image }}" alt="{{ post.hero_image_alt }}"></a>
+        {% endif %}
+    </div>
+
+    <div class="entry-header">
+        <h2 class="entry-title text-left">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+    </div>
+
+    <div class="entry-wrap">
+      <div class="entry">                    
+                            
+        <div class="entry-content">
+          <p>{% if post.excerpt %}{{ post.excerpt }}{% endif %}</p>
+
+
+        </div>
+
+        <div class="entry-meta-wrap clearfix">
+            <ul class="entry-meta">
+                <li class="entry-date">
+                    <a href="#">{{ post.date | date: "%B %-d, %Y" }}</a>
+                </li>
+            </ul>
+            <div class="right" style="line-height: 30px;">
+                <a href="{{ post.url }}" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+</article>

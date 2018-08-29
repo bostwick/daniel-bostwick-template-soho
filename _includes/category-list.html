@@ -1,0 +1,14 @@
+<section class="section-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                {% assign posts = site[page.collection] | sort:"position" %}
+                {% for post in posts %}
+                    {% include category-post.html %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
